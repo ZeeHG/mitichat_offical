@@ -45,7 +45,7 @@ const downloadPC = () => {
       </div>
     </div>
     <div class="banner">
-      <div class="banner-left">
+      <div class="banner-content">
         <div class="title">Bridging Distances Connecting Hearts</div>
         <div class="app-store">
           <img
@@ -60,7 +60,7 @@ const downloadPC = () => {
           />
         </div>
       </div>
-      <div class="banner-right"></div>
+      <!-- <div class="banner-right"></div> -->
     </div>
     <div class="summary">
       <div class="title">A New Social Experience in the AI Era</div>
@@ -251,7 +251,7 @@ const downloadPC = () => {
   background-image: url("../assets/images/bannerbg.png");
   background-size: cover;
   background-position: center;
-  .banner-left {
+  .banner-content {
     display: flex;
     flex-direction: column;
     gap: 131px;
@@ -276,16 +276,6 @@ const downloadPC = () => {
         width: 183px;
         cursor: pointer;
       }
-    }
-  }
-
-  .banner-right {
-    flex: 1;
-    position: relative;
-    height: 100%;
-
-    img {
-      position: absolute;
     }
   }
 }
