@@ -24,7 +24,7 @@ const downloadIOS = () => {
 };
 
 const downloadPC = () => {
-  // location.href = ""
+  location.href = "https://miti.chat/download/miti_1.0.0.exe"
 };
 </script>
 
