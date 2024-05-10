@@ -199,9 +199,9 @@ const downloadPC = () => {
           class="footer-logo"
           @click="scrollTop"
         />
-        <div>Support@miti.com</div>
-        <div>Terms & Privacy Policy&nbsp;|&nbsp;Support</div>
-        <div>Copyright © 2024 Miti. All Rights Reserved.</div>
+        <div class="">Support@miti.com</div>
+        <div class="">Terms & Privacy Policy&nbsp;|&nbsp;Support</div>
+        <div class="">Copyright © 2024 Miti. All Rights Reserved.</div>
       </div>
     </div>
   </main>
@@ -230,7 +230,7 @@ const downloadPC = () => {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    gap: 80px;
     font-size: 20px;
     color: #433367;
     line-height: 25px;
@@ -254,7 +254,7 @@ const downloadPC = () => {
   .banner-content {
     display: flex;
     flex-direction: column;
-    gap: 131px;
+    gap: 103px;
     width: 673px;
     height: 100%;
     justify-content: center;
@@ -270,10 +270,11 @@ const downloadPC = () => {
 
     .app-store {
       display: flex;
-      gap: 38px;
+      gap: 30px;
 
       img {
         width: 183px;
+        height: 61px;
         cursor: pointer;
       }
     }
@@ -296,14 +297,14 @@ const downloadPC = () => {
   .summary-content-box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 20px;
 
     .summary-content {
       height: 516px;
       background: #ffffff;
       border-radius: 25px;
-      padding: 53px 90px 0 53px;
-
+      padding: 53px 53px 0 53px;
+      gap: 31px;
       .icon {
         width: 137px;
       }
@@ -333,7 +334,6 @@ const downloadPC = () => {
     border-bottom: 1px solid #a1a1aa;
     display: flex;
     justify-content: space-between;
-    gap: 26px;
 
     &:first-of-type {
       border-top: 1px solid #a1a1aa;
@@ -373,10 +373,11 @@ const downloadPC = () => {
 
     .feature-desc {
       flex: 1 1 50%;
-      padding: 63.5px 0 101.6px;
+      padding: 63.5px 0 94px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      gap: 186px;
 
       .title {
         font-family: "Helvetica-Bold";
@@ -398,7 +399,7 @@ const downloadPC = () => {
 
 .download-center {
   background: #f9f2ff;
-  padding: 127px 0 254px 0;
+  padding: 127px 0 165px 0;
 
   .title {
     font-family: "Helvetica-Bold";
@@ -406,11 +407,11 @@ const downloadPC = () => {
     color: #000000;
     line-height: 69px;
     text-align: center;
-    margin-bottom: 127px;
+    margin-bottom: 70px;
   }
 
   .download-buttons {
-    gap: 78px;
+    gap: 63px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -443,7 +444,7 @@ const downloadPC = () => {
   font-size: 23px;
   color: #a1a1aa;
   line-height: 27px;
-
+  gap: 99px;
   .footer-inner {
     padding: 48px 0 142px;
     display: flex;
@@ -455,6 +456,7 @@ const downloadPC = () => {
       flex: 0 1 248px;
       min-width: 0;
       cursor: pointer;
+      padding-right: 9px;
     }
   }
 }
