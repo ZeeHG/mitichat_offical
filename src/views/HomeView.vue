@@ -1,4 +1,213 @@
+<template>
+  <main>
+    <div class="header">
+      <img
+        value="@/assets/images/logo.png"
+        alt=""
+        class="header-logo"
+        @click="scrollTop"
+      />
+      <div class="header-tabs">
+        <div class="tab" @click="scrollTop">Home</div>
+        <div class="tab">Privacy</div>
+        <div class="tab">Help Center</div>
+        <div class="tab" @click="goToH5">Miti Web</div>
+      </div>
+    </div>
+    <div class="banner">
+      <div class="banner-content">
+        <div class="title">Bridging Distances Connecting Hearts</div>
+        <div class="app-store">
+          <img
+            value="@/assets/images/play-store.png"
+            alt=""
+            @click="goPlayStore"
+          />
+          <img
+            value="@/assets/images/apple-store.png"
+            alt=""
+            @click="goAppleStore"
+          />
+        </div>
+      </div>
+      <!-- <div class="banner-right"></div> -->
+    </div>
+    <div class="summary">
+      <div class="title">A New Social Experience in the AI Era</div>
+      <div class="summary-content-box">
+        <div class="summary-content">
+          <img value="@/assets/images/experience1.png" alt="" class="icon" />
+          <div class="sub-title">Ultimate Social Experience</div>
+          <div class="content">
+            Immerse yourself in a dynamic social environment that brings
+            together diverse communities. Experience deep connections and rich
+            interactions that redefine what it means to socialize in the digital
+            era.
+          </div>
+        </div>
+        <div class="summary-content">
+          <img value="@/assets/images/experience2.png" alt="" class="icon" />
+          <div class="sub-title">Effortless Cross-Language Communication</div>
+          <div class="content">
+            Overcome linguistic barriers effortlessly, enabling smooth and
+            natural communication across different languages. Whether for
+            personal connections or global business, our technology ensures you
+            can express and understand without limits.
+          </div>
+        </div>
+        <div class="summary-content">
+          <img value="@/assets/images/experience3.png" alt="" class="icon" />
+          <div class="sub-title">Efficient and Reliable AI Assistant</div>
+          <div class="content">
+            Rely on a powerful AI assistant that streamlines your daily tasks,
+            offers proactive suggestions, and helps you manage your time
+            effectively. This assistant is your go-to for quick information
+            retrieval, schedule management, and much more, enhancing your
+            efficiency in every aspect of life.
+          </div>
+        </div>
+        <div class="summary-content">
+          <img value="@/assets/images/experience4.png" alt="" class="icon" />
+          <div class="sub-title">Security and Privacy Protection</div>
+          <div class="content">
+            Experience the utmost confidence in the security of your personal
+            information. Our advanced protocols and privacy-first policies
+            ensure that your data remains protected from unauthorized access and
+            breaches, giving you peace of mind in every interaction.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="feature-list">
+      <div class="feature">
+        <div class="feature-desc">
+          <div class="title">Free Audio & Video Calls</div>
+          <div class="content">
+            Stay connected with friends, family, and colleagues around the world
+            through high-quality audio and video calls at no cost, ensuring
+            you're never out of touch.
+          </div>
+        </div>
+        <div class="feature-img-container">
+          <img
+            value="@/assets/images/feature1.gif"
+            alt=""
+            class="feature-img"
+          />
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-img-container">
+          <img
+            value="@/assets/images/feature2.gif"
+            alt=""
+            class="feature-img"
+          />
+        </div>
+        <div class="feature-desc">
+          <div class="title">Multilingual Interaction Across 60+ Languages</div>
+          <div class="content">
+            Break down language barriers with the ability to communicate
+            effortlessly in over 60 languages, facilitating global interactions
+            and broadening your social and professional networks.
+          </div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-desc">
+          <div class="title">Your Thoughtful AI Assistant</div>
+          <div class="content">
+            Offer features including information retrieval, answering queries,
+            technical support, life advice, quick reading, and summary
+            organization.
+          </div>
+        </div>
+        <div class="feature-img-container">
+          <img
+            value="@/assets/images/feature3.gif"
+            alt=""
+            class="feature-img"
+          />
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-img-container">
+          <img
+            value="@/assets/images/feature4.gif"
+            alt=""
+            class="feature-img"
+          />
+        </div>
+        <div class="feature-desc">
+          <div class="title">Comprehensive Social Interaction</div>
+          <div class="content">
+            Users can interact with AI agents as well as their friends and
+            family on the platform.
+          </div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-desc">
+          <div class="title">Enhanced Privacy Through Multi-Server Support</div>
+          <div class="content">
+            Protect your privacy with advanced multi-server support that
+            distributes data across multiple locations, reducing the risk of
+            data breaches and enhancing security.
+          </div>
+        </div>
+        <div class="feature-img-container">
+          <img
+            value="@/assets/images/feature5.gif"
+            alt=""
+            class="feature-img"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="download-center">
+      <div class="title">Join the miti Community</div>
+      <div class="download-buttons">
+        <div class="button" @click="downloadIOS">
+          <img value="@/assets/images/ios.png" alt="" />
+          <span>Download for iOS</span>
+        </div>
+        <div class="button" @click="downloadAndroid">
+          <img value="@/assets/images/android.png" alt="" />
+          <span>Download for Android</span>
+        </div>
+        <div class="button" @click="downloadPC">
+          <img value="@/assets/images/pc.png" alt="" />
+          <span>Download for PC</span>
+        </div>
+        <div class="button" @click="() => router.push({ name: 'Test' })">
+          <img value="@/assets/images/pc.png" alt="" />
+          <span>检测是否安装app的链接</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-inner">
+        <img
+          value="@/assets/images/logo.png"
+          alt=""
+          class="footer-logo"
+          @click="scrollTop"
+        />
+        <div class="">Support@miti.com</div>
+        <div class="">Terms & Privacy Policy&nbsp;|&nbsp;Support</div>
+        <div class="">Copyright © 2024 Miti. All Rights Reserved.</div>
+      </div>
+    </div>
+  </main>
+</template>
 <script setup lang="ts">
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const iframeSrc = ref("");
+const iframe = ref(null);
+
 const scrollTop = () => {
   document.documentElement.scrollTo(0, 0);
 };
@@ -24,188 +233,9 @@ const downloadIOS = () => {
 };
 
 const downloadPC = () => {
-  location.href = "https://miti.chat/download/miti_1.0.0.exe"
+  location.href = "https://miti.chat/download/miti_1.0.0.exe";
 };
 </script>
-
-<template>
-  <main>
-    <div class="header">
-      <img
-        src="@/assets/images/logo.png"
-        alt=""
-        class="header-logo"
-        @click="scrollTop"
-      />
-      <div class="header-tabs">
-        <div class="tab" @click="scrollTop">Home</div>
-        <div class="tab">Privacy</div>
-        <div class="tab">Help Center</div>
-        <div class="tab" @click="goToH5">Miti Web</div>
-      </div>
-    </div>
-    <div class="banner">
-      <div class="banner-content">
-        <div class="title">Bridging Distances Connecting Hearts</div>
-        <div class="app-store">
-          <img
-            src="@/assets/images/play-store.png"
-            alt=""
-            @click="goPlayStore"
-          />
-          <img
-            src="@/assets/images/apple-store.png"
-            alt=""
-            @click="goAppleStore"
-          />
-        </div>
-      </div>
-      <!-- <div class="banner-right"></div> -->
-    </div>
-    <div class="summary">
-      <div class="title">A New Social Experience in the AI Era</div>
-      <div class="summary-content-box">
-        <div class="summary-content">
-          <img src="@/assets/images/experience1.png" alt="" class="icon" />
-          <div class="sub-title">Ultimate Social Experience</div>
-          <div class="content">
-            Immerse yourself in a dynamic social environment that brings
-            together diverse communities. Experience deep connections and rich
-            interactions that redefine what it means to socialize in the digital
-            era.
-          </div>
-        </div>
-        <div class="summary-content">
-          <img src="@/assets/images/experience2.png" alt="" class="icon" />
-          <div class="sub-title">Effortless Cross-Language Communication</div>
-          <div class="content">
-            Overcome linguistic barriers effortlessly, enabling smooth and
-            natural communication across different languages. Whether for
-            personal connections or global business, our technology ensures you
-            can express and understand without limits.
-          </div>
-        </div>
-        <div class="summary-content">
-          <img src="@/assets/images/experience3.png" alt="" class="icon" />
-          <div class="sub-title">Efficient and Reliable AI Assistant</div>
-          <div class="content">
-            Rely on a powerful AI assistant that streamlines your daily tasks,
-            offers proactive suggestions, and helps you manage your time
-            effectively. This assistant is your go-to for quick information
-            retrieval, schedule management, and much more, enhancing your
-            efficiency in every aspect of life.
-          </div>
-        </div>
-        <div class="summary-content">
-          <img src="@/assets/images/experience4.png" alt="" class="icon" />
-          <div class="sub-title">Security and Privacy Protection</div>
-          <div class="content">
-            Experience the utmost confidence in the security of your personal
-            information. Our advanced protocols and privacy-first policies
-            ensure that your data remains protected from unauthorized access and
-            breaches, giving you peace of mind in every interaction.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="feature-list">
-      <div class="feature">
-        <div class="feature-desc">
-          <div class="title">Free Audio & Video Calls</div>
-          <div class="content">
-            Stay connected with friends, family, and colleagues around the world
-            through high-quality audio and video calls at no cost, ensuring
-            you're never out of touch.
-          </div>
-        </div>
-        <div class="feature-img-container">
-          <img src="@/assets/images/feature1.gif" alt="" class="feature-img" />
-        </div>
-      </div>
-      <div class="feature">
-        <div class="feature-img-container">
-          <img src="@/assets/images/feature2.gif" alt="" class="feature-img" />
-        </div>
-        <div class="feature-desc">
-          <div class="title">Multilingual Interaction Across 60+ Languages</div>
-          <div class="content">
-            Break down language barriers with the ability to communicate
-            effortlessly in over 60 languages, facilitating global interactions
-            and broadening your social and professional networks.
-          </div>
-        </div>
-      </div>
-      <div class="feature">
-        <div class="feature-desc">
-          <div class="title">Your Thoughtful AI Assistant</div>
-          <div class="content">
-            Offer features including information retrieval, answering queries,
-            technical support, life advice, quick reading, and summary
-            organization.
-          </div>
-        </div>
-        <div class="feature-img-container">
-          <img src="@/assets/images/feature3.gif" alt="" class="feature-img" />
-        </div>
-      </div>
-      <div class="feature">
-        <div class="feature-img-container">
-          <img src="@/assets/images/feature4.gif" alt="" class="feature-img" />
-        </div>
-        <div class="feature-desc">
-          <div class="title">Comprehensive Social Interaction</div>
-          <div class="content">
-            Users can interact with AI agents as well as their friends and
-            family on the platform.
-          </div>
-        </div>
-      </div>
-      <div class="feature">
-        <div class="feature-desc">
-          <div class="title">Enhanced Privacy Through Multi-Server Support</div>
-          <div class="content">
-            Protect your privacy with advanced multi-server support that
-            distributes data across multiple locations, reducing the risk of
-            data breaches and enhancing security.
-          </div>
-        </div>
-        <div class="feature-img-container">
-          <img src="@/assets/images/feature5.gif" alt="" class="feature-img" />
-        </div>
-      </div>
-    </div>
-    <div class="download-center">
-      <div class="title">Join the miti Community</div>
-      <div class="download-buttons">
-        <div class="button" @click="downloadIOS">
-          <img src="@/assets/images/ios.png" alt="" />
-          <span>Download for iOS</span>
-        </div>
-        <div class="button" @click="downloadAndroid">
-          <img src="@/assets/images/android.png" alt="" />
-          <span>Download for Android</span>
-        </div>
-        <div class="button" @click="downloadPC">
-          <img src="@/assets/images/pc.png" alt="" />
-          <span>Download for PC</span>
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="footer-inner">
-        <img
-          src="@/assets/images/logo.png"
-          alt=""
-          class="footer-logo"
-          @click="scrollTop"
-        />
-        <div class="">Support@miti.com</div>
-        <div class="">Terms & Privacy Policy&nbsp;|&nbsp;Support</div>
-        <div class="">Copyright © 2024 Miti. All Rights Reserved.</div>
-      </div>
-    </div>
-  </main>
-</template>
 
 <style scoped lang="less">
 .header {
