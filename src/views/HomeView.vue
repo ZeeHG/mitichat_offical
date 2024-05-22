@@ -9,8 +9,8 @@
       />
       <div class="header-tabs">
         <div class="tab" @click="scrollTop">Home</div>
-        <div class="tab">Privacy</div>
-        <div class="tab">Help Center</div>
+        <div class="tab" @click="goToPrivacy">Privacy</div>
+        <div class="tab" @click="goToUserSupport">Help Center</div>
         <div class="tab" @click="goToH5">Miti Web</div>
       </div>
     </div>
@@ -212,6 +212,12 @@ const scrollTop = () => {
   document.documentElement.scrollTo(0, 0);
 };
 
+const goToPrivacy = () => {
+  router.push("/privacy");
+};
+const goToUserSupport = () => {
+  router.push("/userSupport");
+};
 const goToH5 = () => {
   location.href = "https://www.miti.chat";
 };
