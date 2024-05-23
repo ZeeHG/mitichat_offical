@@ -18,13 +18,12 @@
       style="
         padding: 100px 24px 24px 100px;
         width: calc(100% - 287px);
-        height: calc(100vh - 105px);
+        height: calc(100vh - 130px);
         margin: 0 auto;
         display: flex;
+        overflow: hidden;
         justify-content: center;
         align-items: center;
-        background-color: #f4f6fa;
-        overflow: hidden;
       "
     >
       <Layout
@@ -34,238 +33,243 @@
           display: flex;
           flex-direction: row;
           justify-content: center;
-          align-items: center;
+          align-items: space-between;
         "
       >
-        <LayoutSider width="287px" style="background: #fff">
-          <Menu
-            v-model:selectedKeys="selectedKeys2"
-            v-model:openKeys="openKeys"
-            mode="inline"
-            style="height: 100%; width: 287px; border-right: 1px solid #f0f0f0"
-          >
-            <Menu.SubMenu key="sub1">
-              <template #title>
-                <span style="display: flex; align-items: center">
-                  <img
-                    v-if="openKeys.includes('sub1')"
-                    src="@/assets/images/tallymark-1@1x.png"
-                    alt=""
-                    style="margin-right: 8px; width: 16px; height: 16px"
-                  />
-                  <img
-                    v-else
-                    src="@/assets/images/plus@1x.png"
-                    alt=""
-                    style="margin-right: 8px; width: 16px; height: 16px"
-                  />
-                  <span style="font-weight: 500"> Getting Started </span>
-                </span>
-              </template>
-              <Menu.Item key="1" @click="scrollToElement('section1')"
-                >Download miti.chat</Menu.Item
-              >
-              <Menu.Item key="2" @click="scrollToElement('section2')"
-                >Register a miti Account</Menu.Item
-              >
-              <Menu.Item key="3" @click="scrollToElement('section3')"
-                >Update miti.chat</Menu.Item
-              >
-              <Menu.Item key="4" @click="scrollToElement('section4')"
-                >Account Settings</Menu.Item
-              >
-            </Menu.SubMenu>
-            <Menu.SubMenu key="sub2">
-              <template #title>
-                <span style="display: flex; align-items: center">
-                  <img
-                    v-if="openKeys.includes('sub2')"
-                    src="@/assets/images/tallymark-1@1x.png"
-                    alt=""
-                    style="margin-right: 8px; width: 16px; height: 16px"
-                  />
-                  <img
-                    v-else
-                    src="@/assets/images/plus@1x.png"
-                    alt=""
-                    style="margin-right: 8px; width: 16px; height: 16px"
-                  />
-                  <span style="font-weight: 500"> Messaging </span>
-                </span>
-              </template>
-              <Menu.Item key="5" @click="scrollToElement('section5')"
-                >Sending Messages</Menu.Item
-              >
+        <div style="background-color: #ffffff; padding: 16px; width: 287px">
+          <LayoutSider width="287px" style="background: #fff">
+            <Menu
+              v-model:selectedKeys="selectedKeys2"
+              v-model:openKeys="openKeys"
+              mode="inline"
+              style="
+                height: 100%;
+                width: 287px;
+                border-right: 1px solid #f0f0f0;
+              "
+            >
+              <Menu.SubMenu key="sub1">
+                <template #title>
+                  <span style="display: flex; align-items: center">
+                    <img
+                      v-if="openKeys.includes('sub1')"
+                      src="@/assets/images/tallymark-1@1x.png"
+                      alt=""
+                      style="margin-right: 8px; width: 16px; height: 16px"
+                    />
+                    <img
+                      v-else
+                      src="@/assets/images/plus@1x.png"
+                      alt=""
+                      style="margin-right: 8px; width: 16px; height: 16px"
+                    />
+                    <span style="font-weight: 500"> Getting Started </span>
+                  </span>
+                </template>
+                <Menu.Item key="1" @click="scrollToElement('section1')"
+                  >Download miti.chat</Menu.Item
+                >
+                <Menu.Item key="2" @click="scrollToElement('section2')"
+                  >Register a miti Account</Menu.Item
+                >
+                <Menu.Item key="3" @click="scrollToElement('section3')"
+                  >Update miti.chat</Menu.Item
+                >
+                <Menu.Item key="4" @click="scrollToElement('section4')"
+                  >Account Settings</Menu.Item
+                >
+              </Menu.SubMenu>
+              <Menu.SubMenu key="sub2">
+                <template #title>
+                  <span style="display: flex; align-items: center">
+                    <img
+                      v-if="openKeys.includes('sub2')"
+                      src="@/assets/images/tallymark-1@1x.png"
+                      alt=""
+                      style="margin-right: 8px; width: 16px; height: 16px"
+                    />
+                    <img
+                      v-else
+                      src="@/assets/images/plus@1x.png"
+                      alt=""
+                      style="margin-right: 8px; width: 16px; height: 16px"
+                    />
+                    <span style="font-weight: 500"> Messaging </span>
+                  </span>
+                </template>
+                <Menu.Item key="5" @click="scrollToElement('section5')"
+                  >Sending Messages</Menu.Item
+                >
 
-              <Menu.Item key="6" @click="scrollToElement('section6')"
-                >Message Recall</Menu.Item
-              >
-              <Menu.Item key="7" @click="scrollToElement('section7')"
-                >Audio/Video Calls</Menu.Item
-              >
-              <Menu.Item key="8" @click="scrollToElement('section8')"
-                >Group Chats</Menu.Item
-              >
-              <Menu.Item key="9" @click="scrollToElement('section9')"
-                >Burn After Reading</Menu.Item
-              >
-              <Menu.Item key="10" @click="scrollToElement('section10')"
-                >Pin/Delete Chat</Menu.Item
-              >
-              <Menu.Item key="11" @click="scrollToElement('section11')"
-                >Search Chat History</Menu.Item
-              >
-              <Menu.Item key="12" @click="scrollToElement('section12')"
-                >Auto-Translation</Menu.Item
-              >
-              <Menu.Item key="13" @click="scrollToElement('section13')"
-                >Not Receiving miti Notifications?</Menu.Item
-              >
-            </Menu.SubMenu>
-            <Menu.SubMenu key="sub3">
-              <template #title>
-                <span style="display: flex; align-items: center">
-                  <img
-                    v-if="openKeys.includes('sub3')"
-                    src="@/assets/images/tallymark-1@1x.png"
-                    alt=""
-                    style="margin-right: 8px; width: 16px; height: 16px"
-                  />
-                  <img
-                    v-else
-                    src="@/assets/images/plus@1x.png"
-                    alt=""
-                    style="margin-right: 8px; width: 16px; height: 16px"
-                  />
-                  <span style="font-weight: 500"> Friends </span>
-                </span>
-              </template>
-              <Menu.Item key="14" @click="scrollToElement('section14')"
-                >Add Friends</Menu.Item
-              >
-              <Menu.Item key="15" @click="scrollToElement('section15')">
-                Delete Friends</Menu.Item
-              >
-              <Menu.Item key="16" @click="scrollToElement('section16')"
-                >Friend Limit</Menu.Item
-              >
-              <Menu.Item key="17" @click="scrollToElement('section17')"
-                >Blocklist</Menu.Item
-              >
-              <Menu.Item key="18" @click="scrollToElement('section18')"
-                >Check If Blocked</Menu.Item
-              >
-              <Menu.Item key="19" @click="scrollToElement('section19')"
-                >Friend Notes</Menu.Item
-              >
-              <Menu.Item key="20" @click="scrollToElement('section20')"
-                >Prevent Others from Adding You</Menu.Item
-              >
-            </Menu.SubMenu>
-            <Menu.SubMenu key="sub4">
-              <template #title>
-                <span style="display: flex; align-items: center">
-                  <img
-                    v-if="openKeys.includes('sub4')"
-                    src="@/assets/images/tallymark-1@1x.png"
-                    alt=""
-                    style="margin-right: 8px; width: 16px; height: 16px"
-                  />
-                  <img
-                    v-else
-                    src="@/assets/images/plus@1x.png"
-                    alt=""
-                    style="margin-right: 8px; width: 16px; height: 16px"
-                  />
-                  <span style="font-weight: 500"> Settings </span>
-                </span>
-              </template>
-              <Menu.Item key="21" @click="scrollToElement('section21')"
-                >Personal Information Settings</Menu.Item
-              >
-              <Menu.Item key="22" @click="scrollToElement('section22')"
-                >mitiID</Menu.Item
-              >
-              <Menu.Item key="23" @click="scrollToElement('section23')"
-                >Modify Bound Account</Menu.Item
-              >
-              <Menu.Item key="24" @click="scrollToElement('section24')"
-                >Set New Message Alerts</Menu.Item
-              ><Menu.Item key="25" @click="scrollToElement('section25')"
-                >Change System Language</Menu.Item
-              >
-            </Menu.SubMenu>
-            <Menu.SubMenu key="sub5">
-              <template #title>
-                <span style="display: flex; align-items: center">
-                  <img
-                    v-if="openKeys.includes('sub5')"
-                    src="@/assets/images/tallymark-1@1x.png"
-                    alt=""
-                    style="margin-right: 8px; width: 16px; height: 16px"
-                  />
-                  <img
-                    v-else
-                    src="@/assets/images/plus@1x.png"
-                    alt=""
-                    style="margin-right: 8px; width: 16px; height: 16px"
-                  />
-                  <span style="font-weight: 500"> Discovery and Circle </span>
-                </span>
-              </template>
-              <Menu.Item key="26" @click="scrollToElement('section26')"
-                >Differences Between Discovery and Circle</Menu.Item
-              >
-              <Menu.Item key="27" @click="scrollToElement('section27')"
-                >Post Content in Circle</Menu.Item
-              >
-              <Menu.Item key="28" @click="scrollToElement('section28')"
-                >Set Circle Post Viewing Permissions</Menu.Item
-              >
-              <Menu.Item key="29" @click="scrollToElement('section29')"
-                >Delete Circle Posts</Menu.Item
-              >
-              <Menu.Item key="30" @click="scrollToElement('section30')"
-                >Post Content in Discovery</Menu.Item
-              >
-              <Menu.Item key="31" @click="scrollToElement('section31')"
-                >Delete Discovery Posts</Menu.Item
-              >
-            </Menu.SubMenu>
-            <Menu.SubMenu key="sub6">
-              <template #title>
-                <span style="display: flex; align-items: center">
-                  <img
-                    v-if="openKeys.includes('sub6')"
-                    src="@/assets/images/tallymark-1@1x.png"
-                    alt=""
-                    style="margin-right: 8px; width: 16px; height: 16px"
-                  />
-                  <img
-                    v-else
-                    src="@/assets/images/plus@1x.png"
-                    alt=""
-                    style="margin-right: 8px; width: 16px; height: 16px"
-                  />
-                  <span style="font-weight: 500"> AI Features</span>
-                </span>
-              </template>
-              <Menu.Item key="32" @click="scrollToElement('section32')"
-                >Introduction to miti AI Features</Menu.Item
-              >
-              <Menu.Item key="33" @click="scrollToElement('section33')"
-                >Accessing AI Features</Menu.Item
-              >
-              <Menu.Item key="34" @click="scrollToElement('section34')"
-                >Activation Mechanism</Menu.Item
-              >
-              <Menu.Item key="35" @click="scrollToElement('section35')"
-                >Differentiate AI Agents and Real Friends</Menu.Item
-              >
-            </Menu.SubMenu>
-          </Menu>
-        </LayoutSider>
-
+                <Menu.Item key="6" @click="scrollToElement('section6')"
+                  >Message Recall</Menu.Item
+                >
+                <Menu.Item key="7" @click="scrollToElement('section7')"
+                  >Audio/Video Calls</Menu.Item
+                >
+                <Menu.Item key="8" @click="scrollToElement('section8')"
+                  >Group Chats</Menu.Item
+                >
+                <Menu.Item key="9" @click="scrollToElement('section9')"
+                  >Burn After Reading</Menu.Item
+                >
+                <Menu.Item key="10" @click="scrollToElement('section10')"
+                  >Pin/Delete Chat</Menu.Item
+                >
+                <Menu.Item key="11" @click="scrollToElement('section11')"
+                  >Search Chat History</Menu.Item
+                >
+                <Menu.Item key="12" @click="scrollToElement('section12')"
+                  >Auto-Translation</Menu.Item
+                >
+                <Menu.Item key="13" @click="scrollToElement('section13')"
+                  >Not Receiving miti Notifications?</Menu.Item
+                >
+              </Menu.SubMenu>
+              <Menu.SubMenu key="sub3">
+                <template #title>
+                  <span style="display: flex; align-items: center">
+                    <img
+                      v-if="openKeys.includes('sub3')"
+                      src="@/assets/images/tallymark-1@1x.png"
+                      alt=""
+                      style="margin-right: 8px; width: 16px; height: 16px"
+                    />
+                    <img
+                      v-else
+                      src="@/assets/images/plus@1x.png"
+                      alt=""
+                      style="margin-right: 8px; width: 16px; height: 16px"
+                    />
+                    <span style="font-weight: 500"> Friends </span>
+                  </span>
+                </template>
+                <Menu.Item key="14" @click="scrollToElement('section14')"
+                  >Add Friends</Menu.Item
+                >
+                <Menu.Item key="15" @click="scrollToElement('section15')">
+                  Delete Friends</Menu.Item
+                >
+                <Menu.Item key="16" @click="scrollToElement('section16')"
+                  >Friend Limit</Menu.Item
+                >
+                <Menu.Item key="17" @click="scrollToElement('section17')"
+                  >Blocklist</Menu.Item
+                >
+                <Menu.Item key="18" @click="scrollToElement('section18')"
+                  >Check If Blocked</Menu.Item
+                >
+                <Menu.Item key="19" @click="scrollToElement('section19')"
+                  >Friend Notes</Menu.Item
+                >
+                <Menu.Item key="20" @click="scrollToElement('section20')"
+                  >Prevent Others from Adding You</Menu.Item
+                >
+              </Menu.SubMenu>
+              <Menu.SubMenu key="sub4">
+                <template #title>
+                  <span style="display: flex; align-items: center">
+                    <img
+                      v-if="openKeys.includes('sub4')"
+                      src="@/assets/images/tallymark-1@1x.png"
+                      alt=""
+                      style="margin-right: 8px; width: 16px; height: 16px"
+                    />
+                    <img
+                      v-else
+                      src="@/assets/images/plus@1x.png"
+                      alt=""
+                      style="margin-right: 8px; width: 16px; height: 16px"
+                    />
+                    <span style="font-weight: 500"> Settings </span>
+                  </span>
+                </template>
+                <Menu.Item key="21" @click="scrollToElement('section21')"
+                  >Personal Information Settings</Menu.Item
+                >
+                <Menu.Item key="22" @click="scrollToElement('section22')"
+                  >mitiID</Menu.Item
+                >
+                <Menu.Item key="23" @click="scrollToElement('section23')"
+                  >Modify Bound Account</Menu.Item
+                >
+                <Menu.Item key="24" @click="scrollToElement('section24')"
+                  >Set New Message Alerts</Menu.Item
+                ><Menu.Item key="25" @click="scrollToElement('section25')"
+                  >Change System Language</Menu.Item
+                >
+              </Menu.SubMenu>
+              <Menu.SubMenu key="sub5">
+                <template #title>
+                  <span style="display: flex; align-items: center">
+                    <img
+                      v-if="openKeys.includes('sub5')"
+                      src="@/assets/images/tallymark-1@1x.png"
+                      alt=""
+                      style="margin-right: 8px; width: 16px; height: 16px"
+                    />
+                    <img
+                      v-else
+                      src="@/assets/images/plus@1x.png"
+                      alt=""
+                      style="margin-right: 8px; width: 16px; height: 16px"
+                    />
+                    <span style="font-weight: 500"> Discovery and Circle </span>
+                  </span>
+                </template>
+                <Menu.Item key="26" @click="scrollToElement('section26')"
+                  >Differences Between Discovery and Circle</Menu.Item
+                >
+                <Menu.Item key="27" @click="scrollToElement('section27')"
+                  >Post Content in Circle</Menu.Item
+                >
+                <Menu.Item key="28" @click="scrollToElement('section28')"
+                  >Set Circle Post Viewing Permissions</Menu.Item
+                >
+                <Menu.Item key="29" @click="scrollToElement('section29')"
+                  >Delete Circle Posts</Menu.Item
+                >
+                <Menu.Item key="30" @click="scrollToElement('section30')"
+                  >Post Content in Discovery</Menu.Item
+                >
+                <Menu.Item key="31" @click="scrollToElement('section31')"
+                  >Delete Discovery Posts</Menu.Item
+                >
+              </Menu.SubMenu>
+              <Menu.SubMenu key="sub6">
+                <template #title>
+                  <span style="display: flex; align-items: center">
+                    <img
+                      v-if="openKeys.includes('sub6')"
+                      src="@/assets/images/tallymark-1@1x.png"
+                      alt=""
+                      style="margin-right: 8px; width: 16px; height: 16px"
+                    />
+                    <img
+                      v-else
+                      src="@/assets/images/plus@1x.png"
+                      alt=""
+                      style="margin-right: 8px; width: 16px; height: 16px"
+                    />
+                    <span style="font-weight: 500"> AI Features</span>
+                  </span>
+                </template>
+                <Menu.Item key="32" @click="scrollToElement('section32')"
+                  >Introduction to miti AI Features</Menu.Item
+                >
+                <Menu.Item key="33" @click="scrollToElement('section33')"
+                  >Accessing AI Features</Menu.Item
+                >
+                <Menu.Item key="34" @click="scrollToElement('section34')"
+                  >Activation Mechanism</Menu.Item
+                >
+                <Menu.Item key="35" @click="scrollToElement('section35')"
+                  >Differentiate AI Agents and Real Friends</Menu.Item
+                >
+              </Menu.SubMenu>
+            </Menu>
+          </LayoutSider>
+        </div>
         <LayoutContent
           style="padding: 0px 24px 0px 24px; width: calc(100% - 287px)"
         >

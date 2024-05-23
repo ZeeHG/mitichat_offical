@@ -18,7 +18,7 @@
       style="
         padding: 100px 24px 24px 100px;
         width: calc(100% - 287px);
-        height: calc(100vh - 105px);
+        height: calc(100vh - 130px);
         margin: 0 auto;
         display: flex;
         overflow: hidden;
@@ -62,7 +62,7 @@
               mode="inline"
               theme="light"
               style="
-                height: 60%;
+                height: 100%;
                 border: none;
                 border-radius: 8px;
                 overflow: hidden;
