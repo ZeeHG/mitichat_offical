@@ -34,6 +34,7 @@
           display: flex;
           flex-direction: row;
           justify-content: center;
+          align-items: center;
         "
       >
         <LayoutSider width="287px" style="background: #fff">
@@ -58,7 +59,7 @@
                     alt=""
                     style="margin-right: 8px; width: 16px; height: 16px"
                   />
-                  <span> Getting Started </span>
+                  <span style="font-weight: 500"> Getting Started </span>
                 </span>
               </template>
               <Menu.Item key="1" @click="scrollToElement('section1')"
@@ -89,7 +90,7 @@
                     alt=""
                     style="margin-right: 8px; width: 16px; height: 16px"
                   />
-                  <span> Messaging </span>
+                  <span style="font-weight: 500"> Messaging </span>
                 </span>
               </template>
               <Menu.Item key="5" @click="scrollToElement('section5')"
@@ -136,7 +137,7 @@
                     alt=""
                     style="margin-right: 8px; width: 16px; height: 16px"
                   />
-                  <span> Friends </span>
+                  <span style="font-weight: 500"> Friends </span>
                 </span>
               </template>
               <Menu.Item key="14" @click="scrollToElement('section14')"
@@ -176,7 +177,7 @@
                     alt=""
                     style="margin-right: 8px; width: 16px; height: 16px"
                   />
-                  <span> Settings </span>
+                  <span style="font-weight: 500"> Settings </span>
                 </span>
               </template>
               <Menu.Item key="21" @click="scrollToElement('section21')"
@@ -209,7 +210,7 @@
                     alt=""
                     style="margin-right: 8px; width: 16px; height: 16px"
                   />
-                  <span> Discovery and Circle </span>
+                  <span style="font-weight: 500"> Discovery and Circle </span>
                 </span>
               </template>
               <Menu.Item key="26" @click="scrollToElement('section26')"
@@ -246,7 +247,7 @@
                     alt=""
                     style="margin-right: 8px; width: 16px; height: 16px"
                   />
-                  <span> AI Features</span>
+                  <span style="font-weight: 500"> AI Features</span>
                 </span>
               </template>
               <Menu.Item key="32" @click="scrollToElement('section32')"
@@ -960,26 +961,33 @@ const downloadPC = () => {
   cursor: pointer;
 }
 
-::v-deep .ant-menu-submenu-arrow {
+:deep(.ant-menu-submenu-arrow) {
   display: none;
 }
-::v-deep:where(.css-dev-only-do-not-override-16pw25h).ant-menu-light
-  .ant-menu-item-selected {
+
+:deep(
+    :where(.css-dev-only-do-not-override-16pw25h).ant-menu-light
+      .ant-menu-item-selected
+  ) {
   background-color: #7800fd !important;
   color: #fff !important;
 }
-::v-deep
-  :where(.css-dev-only-do-not-override-16pw25h).ant-menu-light
-  .ant-menu-submenu-selected
-  > .ant-menu-submenu-title {
+
+:deep(
+    :where(.css-dev-only-do-not-override-16pw25h).ant-menu-light
+      .ant-menu-submenu-selected
+      > .ant-menu-submenu-title
+  ) {
   color: black;
 }
-::v-deep .ant-menu-submenu-title:hover {
+
+:deep(.ant-menu-submenu-title:hover) {
   background-color: transparent !important;
   color: #7800fd !important;
 }
+
 .text-container {
-  width: 896px;
+  width: 100%;
   flex-grow: 1;
   padding: 48px;
   background-color: white;

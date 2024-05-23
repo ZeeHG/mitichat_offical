@@ -410,7 +410,7 @@ const downloadPC = () => {
   display: none;
 }
 .text-container {
-  width: 896px;
+  width: 100%;
   flex-grow: 1;
   padding: 48px;
   background-color: white;
