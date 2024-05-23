@@ -50,7 +50,7 @@
             <h2
               style="color: #333; margin: 0; font-size: 16px; line-height: 16px"
             >
-              导言
+              introduction
             </h2>
           </div>
           <LayoutSider width="287px" style="background-color: #f4f6fa">
