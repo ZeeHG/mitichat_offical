@@ -36,7 +36,7 @@
           align-items: space-between;
         "
       >
-        <div style="background-color: #ffffff; padding: 16px; width: 287px">
+        <div style="background-color: #ffffff; width: 287px">
           <LayoutSider width="287px" style="background: #fff">
             <Menu
               v-model:selectedKeys="selectedKeys2"
@@ -969,19 +969,12 @@ const downloadPC = () => {
   display: none;
 }
 
-:deep(
-    :where(.css-dev-only-do-not-override-16pw25h).ant-menu-light
-      .ant-menu-item-selected
-  ) {
+:deep(.ant-menu-light .ant-menu-item-selected) {
   background-color: #7800fd !important;
   color: #fff !important;
 }
 
-:deep(
-    :where(.css-dev-only-do-not-override-16pw25h).ant-menu-light
-      .ant-menu-submenu-selected
-      > .ant-menu-submenu-title
-  ) {
+:deep(.ant-menu-light .ant-menu-submenu-selected > .ant-menu-submenu-title) {
   color: black;
 }
 
