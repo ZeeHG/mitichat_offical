@@ -2,7 +2,7 @@
   <main>
     <div class="header">
       <img
-        value="@/assets/images/logo.png"
+        src="@/assets/images/logo.png"
         alt=""
         class="header-logo"
         @click="scrollTop"
@@ -19,12 +19,12 @@
         <div class="title">Bridging Distances Connecting Hearts</div>
         <div class="app-store">
           <img
-            value="@/assets/images/play-store.png"
+            src="@/assets/images/play-store.png"
             alt=""
             @click="goPlayStore"
           />
           <img
-            value="@/assets/images/apple-store.png"
+            src="@/assets/images/apple-store.png"
             alt=""
             @click="goAppleStore"
           />
@@ -36,7 +36,11 @@
       <div class="title">A New Social Experience in the AI Era</div>
       <div class="summary-content-box">
         <div class="summary-content">
-          <img value="@/assets/images/experience1.png" alt="" class="icon" />
+          <img
+            src="@/assets/images/experience1.png"
+            alt=""
+            class="icon"
+          />
           <div class="sub-title">Ultimate Social Experience</div>
           <div class="content">
             Immerse yourself in a dynamic social environment that brings
@@ -46,7 +50,11 @@
           </div>
         </div>
         <div class="summary-content">
-          <img value="@/assets/images/experience2.png" alt="" class="icon" />
+          <img
+            src="@/assets/images/experience2.png"
+            alt=""
+            class="icon"
+          />
           <div class="sub-title">Effortless Cross-Language Communication</div>
           <div class="content">
             Overcome linguistic barriers effortlessly, enabling smooth and
@@ -56,7 +64,11 @@
           </div>
         </div>
         <div class="summary-content">
-          <img value="@/assets/images/experience3.png" alt="" class="icon" />
+          <img
+            src="@/assets/images/experience3.png"
+            alt=""
+            class="icon"
+          />
           <div class="sub-title">Efficient and Reliable AI Assistant</div>
           <div class="content">
             Rely on a powerful AI assistant that streamlines your daily tasks,
@@ -67,7 +79,11 @@
           </div>
         </div>
         <div class="summary-content">
-          <img value="@/assets/images/experience4.png" alt="" class="icon" />
+          <img
+            src="@/assets/images/experience4.png"
+            alt=""
+            class="icon"
+          />
           <div class="sub-title">Security and Privacy Protection</div>
           <div class="content">
             Experience the utmost confidence in the security of your personal
@@ -90,7 +106,7 @@
         </div>
         <div class="feature-img-container">
           <img
-            value="@/assets/images/feature1.gif"
+            src="@/assets/images/feature1.gif"
             alt=""
             class="feature-img"
           />
@@ -99,7 +115,7 @@
       <div class="feature">
         <div class="feature-img-container">
           <img
-            value="@/assets/images/feature2.gif"
+            src="@/assets/images/feature2.gif"
             alt=""
             class="feature-img"
           />
@@ -124,7 +140,7 @@
         </div>
         <div class="feature-img-container">
           <img
-            value="@/assets/images/feature3.gif"
+            src="@/assets/images/feature3.gif"
             alt=""
             class="feature-img"
           />
@@ -133,7 +149,7 @@
       <div class="feature">
         <div class="feature-img-container">
           <img
-            value="@/assets/images/feature4.gif"
+            src="@/assets/images/feature4.gif"
             alt=""
             class="feature-img"
           />
@@ -157,7 +173,7 @@
         </div>
         <div class="feature-img-container">
           <img
-            value="@/assets/images/feature5.gif"
+            src="@/assets/images/feature5.gif"
             alt=""
             class="feature-img"
           />
@@ -167,20 +183,44 @@
     <div class="download-center">
       <div class="title">Join the miti Community</div>
       <div class="download-buttons">
-        <div class="button" @click="downloadIOS">
-          <img value="@/assets/images/ios.png" alt="" />
+        <div
+          class="button"
+          @click="downloadIOS"
+        >
+          <img
+            src="@/assets/images/ios.png"
+            alt=""
+          />
           <span>Download for iOS</span>
         </div>
-        <div class="button" @click="downloadAndroid">
-          <img value="@/assets/images/android.png" alt="" />
+        <div
+          class="button"
+          @click="downloadAndroid"
+        >
+          <img
+            src="@/assets/images/android.png"
+            alt=""
+          />
           <span>Download for Android</span>
         </div>
-        <div class="button" @click="downloadPC">
-          <img value="@/assets/images/pc.png" alt="" />
+        <div
+          class="button"
+          @click="downloadPC"
+        >
+          <img
+            src="@/assets/images/pc.png"
+            alt=""
+          />
           <span>Download for PC</span>
         </div>
-        <div class="button" @click="() => router.push({ name: 'Test' })">
-          <img value="@/assets/images/pc.png" alt="" />
+        <div
+          class="button"
+          @click="() => router.push({ name: 'Test' })"
+        >
+          <img
+            src="@/assets/images/pc.png"
+            alt=""
+          />
           <span>检测是否安装app的链接</span>
         </div>
       </div>
@@ -188,7 +228,7 @@
     <div class="footer">
       <div class="footer-inner">
         <img
-          value="@/assets/images/logo.png"
+          src="@/assets/images/logo.png"
           alt=""
           class="footer-logo"
           @click="scrollTop"
@@ -370,6 +410,7 @@ const downloadPC = () => {
     border-bottom: 1px solid #a1a1aa;
     display: flex;
     justify-content: space-between;
+        align-items: center;
 
     &:first-of-type {
       border-top: 1px solid #a1a1aa;
@@ -395,7 +436,7 @@ const downloadPC = () => {
       &::after {
         content: "";
         width: 100%;
-        height: 5px;
+        height: 6px;
         background-color: #fff;
         position: absolute;
         bottom: 0;

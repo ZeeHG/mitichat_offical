@@ -5,10 +5,10 @@
         src="@/assets/images/logo.png"
         alt="Logo"
         class="header-logo"
-        @click="scrollTop"
+        @click="goToHome"
       />
       <div class="header-tabs">
-        <div class="tab" @click="scrollTop">Home</div>
+        <div class="tab" @click="goToHome">Home</div>
         <div class="tab" @click="goToPrivacy">Privacy</div>
         <div class="tab" @click="goToUserSupport">Help Center</div>
         <div class="tab" @click="goToH5">Miti Web</div>
@@ -16,83 +16,261 @@
     </LayoutHeader>
     <LayoutContent
       style="
-        padding: 100px 24px 24px;
+        padding: 16px 24px 24px 100px;
         width: calc(100% - 287px);
-        margin-left: 287px;
+
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f6fa;
+        overflow: hidden;
       "
     >
       <Layout
         style="
-          background: #fff;
+          background: #f4f6fa;
           flex-grow: 1;
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: center;
         "
       >
-        <LayoutSider width="287px" style="background: #fff; overflow: auto">
+        <LayoutSider width="287px" style="background: #fff">
           <Menu
             v-model:selectedKeys="selectedKeys2"
             v-model:openKeys="openKeys"
             mode="inline"
-            style="height: 100%; border-right: 1px solid #f0f0f0"
+            style="height: 100%; width: 287px; border-right: 1px solid #f0f0f0"
           >
             <Menu.SubMenu key="sub1">
               <template #title>
-                <span> Welcome to Miti! </span>
+                <span style="display: flex; align-items: center">
+                  <img
+                    v-if="openKeys.includes('sub1')"
+                    src="@/assets/images/tallymark-1@1x.png"
+                    alt=""
+                    style="margin-right: 8px; width: 16px; height: 16px"
+                  />
+                  <img
+                    v-else
+                    src="@/assets/images/plus@1x.png"
+                    alt=""
+                    style="margin-right: 8px; width: 16px; height: 16px"
+                  />
+                  <span> Getting Started </span>
+                </span>
               </template>
+              <Menu.Item key="1" @click="scrollToElement('section1')"
+                >Download miti.chat</Menu.Item
+              >
+              <Menu.Item key="2" @click="scrollToElement('section2')"
+                >Register a miti Account</Menu.Item
+              >
+              <Menu.Item key="3" @click="scrollToElement('section3')"
+                >Update miti.chat</Menu.Item
+              >
+              <Menu.Item key="4" @click="scrollToElement('section4')"
+                >Account Settings</Menu.Item
+              >
             </Menu.SubMenu>
             <Menu.SubMenu key="sub2">
               <template #title>
-                <span> Our Service </span>
+                <span style="display: flex; align-items: center">
+                  <img
+                    v-if="openKeys.includes('sub2')"
+                    src="@/assets/images/tallymark-1@1x.png"
+                    alt=""
+                    style="margin-right: 8px; width: 16px; height: 16px"
+                  />
+                  <img
+                    v-else
+                    src="@/assets/images/plus@1x.png"
+                    alt=""
+                    style="margin-right: 8px; width: 16px; height: 16px"
+                  />
+                  <span> Messaging </span>
+                </span>
               </template>
+              <Menu.Item key="5" @click="scrollToElement('section5')"
+                >Sending Messages</Menu.Item
+              >
+
+              <Menu.Item key="6" @click="scrollToElement('section6')"
+                >Message Recall</Menu.Item
+              >
+              <Menu.Item key="7" @click="scrollToElement('section7')"
+                >Audio/Video Calls</Menu.Item
+              >
+              <Menu.Item key="8" @click="scrollToElement('section8')"
+                >Group Chats</Menu.Item
+              >
+              <Menu.Item key="9" @click="scrollToElement('section9')"
+                >Burn After Reading</Menu.Item
+              >
+              <Menu.Item key="10" @click="scrollToElement('section10')"
+                >Pin/Delete Chat</Menu.Item
+              >
+              <Menu.Item key="11" @click="scrollToElement('section11')"
+                >Search Chat History</Menu.Item
+              >
+              <Menu.Item key="12" @click="scrollToElement('section12')"
+                >Auto-Translation</Menu.Item
+              >
+              <Menu.Item key="13" @click="scrollToElement('section13')"
+                >Not Receiving miti Notifications?</Menu.Item
+              >
             </Menu.SubMenu>
             <Menu.SubMenu key="sub3">
               <template #title>
-                <span> Your Service Provider </span>
+                <span style="display: flex; align-items: center">
+                  <img
+                    v-if="openKeys.includes('sub3')"
+                    src="@/assets/images/tallymark-1@1x.png"
+                    alt=""
+                    style="margin-right: 8px; width: 16px; height: 16px"
+                  />
+                  <img
+                    v-else
+                    src="@/assets/images/plus@1x.png"
+                    alt=""
+                    style="margin-right: 8px; width: 16px; height: 16px"
+                  />
+                  <span> Friends </span>
+                </span>
               </template>
+              <Menu.Item key="14" @click="scrollToElement('section14')"
+                >Add Friends</Menu.Item
+              >
+              <Menu.Item key="15" @click="scrollToElement('section15')">
+                Delete Friends</Menu.Item
+              >
+              <Menu.Item key="16" @click="scrollToElement('section16')"
+                >Friend Limit</Menu.Item
+              >
+              <Menu.Item key="17" @click="scrollToElement('section17')"
+                >Blocklist</Menu.Item
+              >
+              <Menu.Item key="18" @click="scrollToElement('section18')"
+                >Check If Blocked</Menu.Item
+              >
+              <Menu.Item key="19" @click="scrollToElement('section19')"
+                >Friend Notes</Menu.Item
+              >
+              <Menu.Item key="20" @click="scrollToElement('section20')"
+                >Prevent Others from Adding You</Menu.Item
+              >
             </Menu.SubMenu>
             <Menu.SubMenu key="sub4">
               <template #title>
-                <span> Terms of Service </span>
+                <span style="display: flex; align-items: center">
+                  <img
+                    v-if="openKeys.includes('sub4')"
+                    src="@/assets/images/tallymark-1@1x.png"
+                    alt=""
+                    style="margin-right: 8px; width: 16px; height: 16px"
+                  />
+                  <img
+                    v-else
+                    src="@/assets/images/plus@1x.png"
+                    alt=""
+                    style="margin-right: 8px; width: 16px; height: 16px"
+                  />
+                  <span> Settings </span>
+                </span>
               </template>
+              <Menu.Item key="21" @click="scrollToElement('section21')"
+                >oPersonal Information Settings</Menu.Item
+              >
+              <Menu.Item key="22" @click="scrollToElement('section22')"
+                >mitiID</Menu.Item
+              >
+              <Menu.Item key="23" @click="scrollToElement('section23')"
+                >Modify Bound Account</Menu.Item
+              >
+              <Menu.Item key="24" @click="scrollToElement('section24')"
+                >Set New Message Alerts</Menu.Item
+              ><Menu.Item key="25" @click="scrollToElement('section25')"
+                >Change System Language</Menu.Item
+              >
             </Menu.SubMenu>
             <Menu.SubMenu key="sub5">
               <template #title>
-                <span> Please read our Privacy Policy </span>
+                <span style="display: flex; align-items: center">
+                  <img
+                    v-if="openKeys.includes('sub5')"
+                    src="@/assets/images/tallymark-1@1x.png"
+                    alt=""
+                    style="margin-right: 8px; width: 16px; height: 16px"
+                  />
+                  <img
+                    v-else
+                    src="@/assets/images/plus@1x.png"
+                    alt=""
+                    style="margin-right: 8px; width: 16px; height: 16px"
+                  />
+                  <span> Discovery and Circle </span>
+                </span>
               </template>
+              <Menu.Item key="26" @click="scrollToElement('section26')"
+                >Differences Between Discovery and Circle</Menu.Item
+              >
+              <Menu.Item key="27" @click="scrollToElement('section27')"
+                >Post Content in Circle</Menu.Item
+              >
+              <Menu.Item key="28" @click="scrollToElement('section28')"
+                >Set Circle Post Viewing Permissions</Menu.Item
+              >
+              <Menu.Item key="29" @click="scrollToElement('section29')"
+                >Delete Circle Posts</Menu.Item
+              >
+              <Menu.Item key="30" @click="scrollToElement('section30')"
+                >Post Content in Discovery</Menu.Item
+              >
+              <Menu.Item key="31" @click="scrollToElement('section31')"
+                >Delete Discovery Posts</Menu.Item
+              >
             </Menu.SubMenu>
             <Menu.SubMenu key="sub6">
               <template #title>
-                <span> Using Miti</span>
+                <span style="display: flex; align-items: center">
+                  <img
+                    v-if="openKeys.includes('sub6')"
+                    src="@/assets/images/tallymark-1@1x.png"
+                    alt=""
+                    style="margin-right: 8px; width: 16px; height: 16px"
+                  />
+                  <img
+                    v-else
+                    src="@/assets/images/plus@1x.png"
+                    alt=""
+                    style="margin-right: 8px; width: 16px; height: 16px"
+                  />
+                  <span> AI Features</span>
+                </span>
               </template>
-            </Menu.SubMenu>
-            <Menu.SubMenu key="sub7">
-              <template #title>
-                <span> Your Rights and Licenses with Miti</span>
-              </template>
-            </Menu.SubMenu>
-            <Menu.SubMenu key="sub8">
-              <template #title>
-                <span> Disclaimers and Limitations of Liability</span>
-              </template>
-            </Menu.SubMenu>
-            <Menu.SubMenu key="sub9">
-              <template #title>
-                <span> Resolving Disputes and Terminating Terms</span>
-              </template>
-            </Menu.SubMenu>
-            <Menu.SubMenu key="sub10">
-              <template #title>
-                <span> General</span>
-              </template>
+              <Menu.Item key="32" @click="scrollToElement('section32')"
+                >Introduction to miti AI Features</Menu.Item
+              >
+              <Menu.Item key="33" @click="scrollToElement('section33')"
+                >Accessing AI Features</Menu.Item
+              >
+              <Menu.Item key="34" @click="scrollToElement('section34')"
+                >Activation Mechanism</Menu.Item
+              >
+              <Menu.Item key="35" @click="scrollToElement('section35')"
+                >Differentiate AI Agents and Real Friends</Menu.Item
+              >
             </Menu.SubMenu>
           </Menu>
         </LayoutSider>
-        <LayoutContent style="padding: 24px; width: 896px">
+
+        <LayoutContent
+          style="padding: 0px 24px 0px 24px; width: calc(100% - 287px)"
+        >
           <div class="text-container">
-            <div class="text-container">
-              <p>Getting Started</p>
+            <h1>Getting Started</h1>
+            <div id="section1">
               <h2>1. Download miti.chat</h2>
               <h3>1.1 Android</h3>
               <p>1. Ensure your Android version is 10.0 or higher.</p>
@@ -107,6 +285,7 @@
                 1. You can access miti web by opening miti.chat in your browser,
                 whether on computer or mobile phone.
               </p>
+
               <p>2. To add miti web to your mobile home screen:</p>
               <ul>
                 <li>
@@ -130,6 +309,8 @@
                 to download the miti.chat PC version and follow the installation
                 instructions.
               </p>
+            </div>
+            <div id="section2">
               <h2>2. Register a miti Account</h2>
               <h3>2.1 Register with a Phone Number</h3>
               <p>
@@ -179,6 +360,8 @@
                 1. Click the Facebook button at the bottom of the login screen.
               </p>
               <p>2. Allow miti.chat to open the Facebook app.</p>
+            </div>
+            <div id="section3">
               <p>3. The system will automatically create a miti account.</p>
               <h2>3. Update miti.chat</h2>
               <h3>3.1 Android</h3>
@@ -194,6 +377,8 @@
                 "Download for PC" at the bottom to download the latest
                 installer. Follow the instructions to update.
               </p>
+            </div>
+            <div id="section4">
               <h2>4. Account Settings</h2>
               <h3>4.1 Registered Phone and Email</h3>
               <p>1. Use the phone or email registered at sign-up to log in.</p>
@@ -201,7 +386,9 @@
                 2. In the "My" menu, click "Account Settings" to enter "Account
                 & Security" and modify your bound phone number and email.
               </p>
-              <h2>Messaging</h2>
+            </div>
+            <h2>Messaging</h2>
+            <div id="section5">
               <h3>1. Sending Messages</h3>
               <h4>1.1 Text Messages</h4>
               <p>
@@ -245,6 +432,8 @@
                 Click the plus icon next to the text input area, then click
                 "File" at the bottom. Select the file to send.
               </p>
+            </div>
+            <div id="section6">
               <h3>2. Message Recall</h3>
               <p>
                 Long press the sent message, click "Recall" to retract the sent
@@ -252,12 +441,16 @@
                 video, contact card, and location messages sent within the last
                 2 minutes.
               </p>
+            </div>
+            <div id="section7">
               <h3>3. Audio/Video Calls</h3>
               <p>
                 Click the plus icon next to the text input area, then click
                 "Call" at the bottom to choose between starting a video or voice
                 call.
               </p>
+            </div>
+            <div id="section8">
               <h3>4. Group Chats</h3>
               <h4>4.1 Create a Group Chat</h4>
               <p>
@@ -329,6 +522,8 @@
                 Click the three dots in the top right of the group chat screen,
                 enter chat settings, and turn on "Do Not Disturb."
               </p>
+            </div>
+            <div id="section9">
               <h2>5. Burn After Reading</h2>
               <p>
                 Burn After Reading is an optional feature for one-on-one chats.
@@ -351,17 +546,23 @@
                 2. Select the burn time under "Time Settings." Default is 30
                 seconds, but you can set it to 5 minutes, 1 hour, or 1 day.
               </p>
+            </div>
+            <div id="section10">
               <h2>6. Pin/Delete Chat</h2>
               <p>
                 Swipe left on the conversation bar in the chat menu, and click
                 "Pin" or "Delete."
               </p>
+            </div>
+            <div id="section11">
               <h2>7. Search Chat History</h2>
               <p>
                 Click the plus icon next to the text input area, then click
                 "Search" at the bottom to quickly find conversations, images,
                 videos, and files.
               </p>
+            </div>
+            <div id="section12">
               <h2>8. Auto-Translation</h2>
               <h3>8.1 Introduction to Auto-Translation</h3>
               <p>
@@ -381,6 +582,8 @@
                 Long press a message and click "Translate" to manually translate
                 a single message.
               </p>
+            </div>
+            <div id="section13">
               <h2>9. Not Receiving miti Notifications?</h2>
               <h3>Android</h3>
               <p>
@@ -394,7 +597,9 @@
                 "Allow Notifications" under Focus Mode, and ensure Do Not
                 Disturb mode is off.
               </p>
-              <h2>Friends</h2>
+            </div>
+            <h2>Friends</h2>
+            <div id="section14">
               <h3>1. Add Friends</h3>
               <h4>1.1 Add Friends Actively</h4>
               <p>
@@ -415,15 +620,21 @@
                 In the "Chat" menu, click "Friends," select "Recently Added,"
                 click "View," and then click "Accept."
               </p>
+            </div>
+            <div id="section15">
               <h3>2. Delete Friends</h3>
               <p>
                 Click the friend's avatar, click the function button in the top
                 right, and click "Unfriend."
               </p>
+            </div>
+            <div id="section16">
               <h3>3. Friend Limit</h3>
               <p>
                 You can add up to 10,000 friends on miti (excluding groups).
               </p>
+            </div>
+            <div id="section17">
               <h3>4. Blocklist</h3>
               <h4>4.1 Introduction to Blocklist</h4>
               <p>1. You won't receive messages from blocked contacts.</p>
@@ -441,11 +652,15 @@
                 2. Remove: Click the friend's avatar, click the function button
                 in the top right, and turn off "Add to Blocklist."
               </p>
+            </div>
+            <div id="section18">
               <h3>5. Check If Blocked</h3>
               <p>
                 If you are blocked, you'll receive a "Message sent but rejected"
                 notification when trying to message them.
               </p>
+            </div>
+            <div id="section19">
               <h2>6. Friend Notes</h2>
               <h3>6.1 Introduction to Friend Notes</h3>
               <p>
@@ -457,17 +672,23 @@
                 Click the friend's avatar, click "Remark," edit, and save the
                 remark.
               </p>
+            </div>
+            <div id="section20">
               <h2>7. Prevent Others from Adding You</h2>
               <p>
                 In "My" menu, click "Account Settings," and enable "Disallow Add
                 Me as Friend."
               </p>
-              <h2>Settings</h2>
+            </div>
+            <h2>Settings</h2>
+            <div id="section21">
               <h3>1. Personal Information Settings</h3>
               <p>
                 In "My" menu, click "My Info" to set your miti nickname, gender,
                 birthday, avatar, and mitiID.
               </p>
+            </div>
+            <div id="section22">
               <h2>2. mitiID</h2>
               <h3>2.1 Introduction to mitiID</h3>
               <p>
@@ -481,12 +702,16 @@
                 changed once per year. Once changed, it cannot be reverted, and
                 others won't be able to find you using the old mitiID.
               </p>
+            </div>
+            <div id="section23">
               <h2>3. Modify Bound Account</h2>
               <p>
                 In "My" menu, click "Account Setup," then click "Account &
                 Security" to manage the phone number and email linked to
                 different accounts.
               </p>
+            </div>
+            <div id="section24">
               <h2>4. Set New Message Alerts</h2>
               <p>
                 In "My" menu, click "Account Settings," and set the notification
@@ -494,18 +719,24 @@
                 Enable "Do Not Disturb Mode" at the top of the "Account
                 Settings" screen to stop receiving notifications.
               </p>
+            </div>
+            <div id="section25">
               <h2>5. Change System Language</h2>
               <p>
                 In "My" menu, click "Account Settings," then "Language Setup."
                 miti currently supports English, Simplified Chinese, Japanese,
                 Korean, and Spanish.
               </p>
-              <h2>Discovery and Circle</h2>
+            </div>
+            <h2>Discovery and Circle</h2>
+            <div id="section26">
               <h3>1. Differences Between Discovery and Circle</h3>
               <p>
                 Discovery content is visible to everyone, while Circle content
                 is only visible to your friends or specific people you set.
               </p>
+            </div>
+            <div id="section27">
               <h3>2. Post Content in Circle</h3>
               <p>
                 In the "Circle" menu, click the "New Post" button in the top
@@ -532,16 +763,22 @@
                   friends mentioned.
                 </li>
               </ul>
+            </div>
+            <div id="section28">
               <h3>3. Set Circle Post Viewing Permissions</h3>
               <p>
                 On the Circle posting page, click "Who Can Watch" to set the
                 viewing permissions for your post.
               </p>
+            </div>
+            <div id="section29">
               <h3>4. Delete Circle Posts</h3>
               <p>
                 Enter the post you created and click the delete button at the
                 bottom left.
               </p>
+            </div>
+            <div id="section30">
               <h3>5. Post Content in Discovery</h3>
               <p>
                 In the "Circle" menu, click the "New Post" button in the top
@@ -549,12 +786,16 @@
                 the bottom, then click "Publish" at the top right to share your
                 post on Discovery.
               </p>
+            </div>
+            <div id="section31">
               <h3>6. Delete Discovery Posts</h3>
               <p>
                 In the Discovery menu, click your post, then click the three
                 dots in the top right and select "Delete."
               </p>
-              <h2>AI Features</h2>
+            </div>
+            <h2>AI Features</h2>
+            <div id="section32">
               <h3>1. Introduction to miti AI Features</h3>
               <p>
                 At miti, the AI era's social platform is one where AI agents
@@ -586,12 +827,16 @@
                 Ada is miti's product manager. You can ask her any questions
                 related to using the product.
               </p>
+            </div>
+            <div id="section33">
               <h3>2. Accessing AI Features</h3>
               <p>
                 Inactive miti accounts can use chat, Discovery, and Circle
                 features, but not AI features. Users can activate their miti
                 accounts with an invite code to gain AI features.
               </p>
+            </div>
+            <div id="section34">
               <h3>3. Activation Mechanism</h3>
               <h4>3.1 Activate During Registration</h4>
               <p>
@@ -615,6 +860,8 @@
                 In the "My" menu, click the "Pending Activation" button, then
                 click "Change Inviter."
               </p>
+            </div>
+            <div id="section35">
               <h3>4. Differentiate AI Agents and Real Friends</h3>
               <p>
                 In the "Chat" menu, friends with a small robot icon next to
@@ -633,19 +880,20 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import { Layout, Menu, Breadcrumb } from "ant-design-vue";
-import {
-  UserOutlined,
-  LaptopOutlined,
-  NotificationOutlined,
-} from "@ant-design/icons-vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
 const selectedKeys1 = ref<string[]>(["2"]);
 const selectedKeys2 = ref<string[]>(["1"]);
 const openKeys = ref<string[]>(["sub1"]);
-const scrollTop = () => {
-  document.documentElement.scrollTo(0, 0);
+const scrollToElement = (elementId: any) => {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+};
+const goToHome = () => {
+  router.push("/");
 };
 
 const goToPrivacy = () => {
@@ -685,7 +933,6 @@ const downloadPC = () => {
   justify-content: space-between;
   align-items: center;
   padding: 51px 127px 16px 112px;
-  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -713,30 +960,53 @@ const downloadPC = () => {
   cursor: pointer;
 }
 
-#components-layout-demo-top-side .logo {
-  float: left;
-  width: 120px;
-  height: 31px;
-  margin: 16px 24px 16px 0;
-  background: rgba(255, 255, 255, 0.3);
+::v-deep .ant-menu-submenu-arrow {
+  display: none;
 }
-
-.ant-row-rtl #components-layout-demo-top-side .logo {
-  float: right;
-  margin: 16px 0 16px 24px;
+::v-deep:where(.css-dev-only-do-not-override-16pw25h).ant-menu-light
+  .ant-menu-item-selected {
+  background-color: #7800fd !important;
+  color: #fff !important;
 }
-
-.site-layout-background {
-  background: #fff;
+::v-deep
+  :where(.css-dev-only-do-not-override-16pw25h).ant-menu-light
+  .ant-menu-submenu-selected
+  > .ant-menu-submenu-title {
+  color: black;
+}
+::v-deep .ant-menu-submenu-title:hover {
+  background-color: transparent !important;
+  color: #7800fd !important;
 }
 .text-container {
   width: 896px;
   flex-grow: 1;
-  padding: 20px;
+  padding: 48px;
   background-color: white;
   margin-left: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   height: calc(100vh - 80px);
+}
+.text-container h1,
+.text-container h2,
+.text-container h3 {
+  font-family: "MiSans", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #000000;
+  line-height: 28px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.text-container p {
+  font-family: "MiSans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 28px;
+  text-align: left;
+  margin-top: 20px;
 }
 </style>
