@@ -180,7 +180,7 @@
                 </span>
               </template>
               <Menu.Item key="21" @click="scrollToElement('section21')"
-                >oPersonal Information Settings</Menu.Item
+                >Personal Information Settings</Menu.Item
               >
               <Menu.Item key="22" @click="scrollToElement('section22')"
                 >mitiID</Menu.Item
