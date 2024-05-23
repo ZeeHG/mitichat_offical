@@ -406,7 +406,7 @@ const downloadPC = () => {
   cursor: pointer;
 }
 
-::v-deep .ant-menu-submenu-arrow {
+:deep(.ant-menu-submenu-arrow) {
   display: none;
 }
 .text-container {
