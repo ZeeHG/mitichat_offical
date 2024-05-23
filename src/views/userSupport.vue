@@ -36,7 +36,7 @@
           align-items: space-between;
         "
       >
-        <div style="background-color: #ffffff; padding: 16px; width: 287px">
+        <div style="background-color: #ffffff; width: 287px">
           <LayoutSider width="287px" style="background: #fff">
             <Menu
               v-model:selectedKeys="selectedKeys2"
