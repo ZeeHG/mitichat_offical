@@ -36,11 +36,7 @@
       <div class="title">A New Social Experience in the AI Era</div>
       <div class="summary-content-box">
         <div class="summary-content">
-          <img
-            src="@/assets/images/experience1.png"
-            alt=""
-            class="icon"
-          />
+          <img src="@/assets/images/experience1.png" alt="" class="icon" />
           <div class="sub-title">Ultimate Social Experience</div>
           <div class="content">
             Immerse yourself in a dynamic social environment that brings
@@ -50,11 +46,7 @@
           </div>
         </div>
         <div class="summary-content">
-          <img
-            src="@/assets/images/experience2.png"
-            alt=""
-            class="icon"
-          />
+          <img src="@/assets/images/experience2.png" alt="" class="icon" />
           <div class="sub-title">Effortless Cross-Language Communication</div>
           <div class="content">
             Overcome linguistic barriers effortlessly, enabling smooth and
@@ -64,11 +56,7 @@
           </div>
         </div>
         <div class="summary-content">
-          <img
-            src="@/assets/images/experience3.png"
-            alt=""
-            class="icon"
-          />
+          <img src="@/assets/images/experience3.png" alt="" class="icon" />
           <div class="sub-title">Efficient and Reliable AI Assistant</div>
           <div class="content">
             Rely on a powerful AI assistant that streamlines your daily tasks,
@@ -79,11 +67,7 @@
           </div>
         </div>
         <div class="summary-content">
-          <img
-            src="@/assets/images/experience4.png"
-            alt=""
-            class="icon"
-          />
+          <img src="@/assets/images/experience4.png" alt="" class="icon" />
           <div class="sub-title">Security and Privacy Protection</div>
           <div class="content">
             Experience the utmost confidence in the security of your personal
@@ -105,20 +89,12 @@
           </div>
         </div>
         <div class="feature-img-container">
-          <img
-            src="@/assets/images/feature1.gif"
-            alt=""
-            class="feature-img"
-          />
+          <img src="@/assets/images/feature1.gif" alt="" class="feature-img" />
         </div>
       </div>
       <div class="feature">
         <div class="feature-img-container">
-          <img
-            src="@/assets/images/feature2.gif"
-            alt=""
-            class="feature-img"
-          />
+          <img src="@/assets/images/feature2.gif" alt="" class="feature-img" />
         </div>
         <div class="feature-desc">
           <div class="title">Multilingual Interaction Across 60+ Languages</div>
@@ -139,20 +115,12 @@
           </div>
         </div>
         <div class="feature-img-container">
-          <img
-            src="@/assets/images/feature3.gif"
-            alt=""
-            class="feature-img"
-          />
+          <img src="@/assets/images/feature3.gif" alt="" class="feature-img" />
         </div>
       </div>
       <div class="feature">
         <div class="feature-img-container">
-          <img
-            src="@/assets/images/feature4.gif"
-            alt=""
-            class="feature-img"
-          />
+          <img src="@/assets/images/feature4.gif" alt="" class="feature-img" />
         </div>
         <div class="feature-desc">
           <div class="title">Comprehensive Social Interaction</div>
@@ -172,48 +140,26 @@
           </div>
         </div>
         <div class="feature-img-container">
-          <img
-            src="@/assets/images/feature5.gif"
-            alt=""
-            class="feature-img"
-          />
+          <img src="@/assets/images/feature5.gif" alt="" class="feature-img" />
         </div>
       </div>
     </div>
     <div class="download-center">
       <div class="title">Join the miti Community</div>
       <div class="download-buttons">
-        <div
-          class="button"
-          @click="downloadIOS"
-        >
-          <img
-            src="@/assets/images/ios.png"
-            alt=""
-          />
+        <div class="button" @click="downloadIOS">
+          <img src="@/assets/images/ios.png" alt="" />
           <span>Download for iOS</span>
         </div>
-        <div
-          class="button"
-          @click="downloadAndroid"
-        >
-          <img
-            src="@/assets/images/android.png"
-            alt=""
-          />
+        <div class="button" @click="downloadAndroid">
+          <img src="@/assets/images/android.png" alt="" />
           <span>Download for Android</span>
         </div>
-        <div
-          class="button"
-          @click="downloadPC"
-        >
-          <img
-            src="@/assets/images/pc.png"
-            alt=""
-          />
+        <div class="button" @click="downloadPC">
+          <img src="@/assets/images/pc.png" alt="" />
           <span>Download for PC</span>
         </div>
-        <div
+        <!-- <div
           class="button"
           @click="() => router.push({ name: 'Test' })"
         >
@@ -222,7 +168,7 @@
             alt=""
           />
           <span>检测是否安装app的链接</span>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="footer">
@@ -410,7 +356,7 @@ const downloadPC = () => {
     border-bottom: 1px solid #a1a1aa;
     display: flex;
     justify-content: space-between;
-        align-items: center;
+    align-items: center;
 
     &:first-of-type {
       border-top: 1px solid #a1a1aa;
