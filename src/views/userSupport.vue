@@ -16,18 +16,13 @@
     </LayoutHeader>
     <LayoutContent
       style="
-        padding: 0px 24px 0px 100px;
-        width: 1300px;
+        width: auto;
         height: 100%;
         margin: 0 auto;
         display: flex;
         overflow-y: auto;
         justify-content: center;
         align-items: center;
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 100px;
       "
     >
       <Layout
@@ -37,8 +32,8 @@
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          height: calc(100vh - 90px);
-          position: fixed;
+          height: calc(100vh - 130px);
+
           overflow-y: auto;
         "
       >
@@ -53,14 +48,19 @@
           "
         >
           <LayoutSider
-            width="287px"
-            style="background: #fff; height: 100%; overflow-y: auto"
+            style="
+              width: auto;
+              background: #fff;
+              height: 100%;
+              overflow-y: auto;
+            "
           >
             <Menu
               v-model:selectedKeys="selectedKeys2"
               v-model:openKeys="openKeys"
               mode="inline"
               style="
+                width: auto;
                 height: 100%;
                 border: none;
                 border-radius: 8px;
@@ -914,7 +914,10 @@ const downloadPC = () => {
 :deep(.ant-menu-submenu-arrow) {
   display: none;
 }
-
+:deep(.ant-menu-item) {
+  white-space: normal;
+  padding-left: 24px !important;
+}
 :deep(.ant-menu-light .ant-menu-item-selected) {
   background-color: #7800fd !important;
   color: #fff !important;
@@ -932,8 +935,14 @@ const downloadPC = () => {
 :deep(.ant-menu-submenu-title) {
   position: relative;
   padding-bottom: 16px;
+  padding-left: 0px !important;
 }
-
+:deep(.ant-menu-item .ant-menu-title-content),
+:deep(.ant-menu-submenu-title .ant-menu-title-content) {
+  flex: none !important;
+  white-space: normal !important;
+  height: auto !important;
+}
 :deep(.ant-menu-submenu:not(.ant-menu-submenu-open))
   .ant-menu-submenu-title::after {
   content: "";
@@ -997,7 +1006,6 @@ const downloadPC = () => {
     line-height: 28px;
     text-align: left;
     padding-left: 1.5em;
-    // margin-top: 20px;
   }
   :deep(ul) {
     font-family: "Helvetica-Regular";
@@ -1007,7 +1015,6 @@ const downloadPC = () => {
     line-height: 28px;
     text-align: left;
     padding-left: 1.5em;
-    // margin-top: 20px;
   }
   :deep(li) {
     font-family: "Helvetica-Regular";
