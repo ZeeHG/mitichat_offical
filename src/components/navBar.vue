@@ -8,7 +8,7 @@
     />
     <div class="header-tabs">
       <div class="tab" @click="scrollTop">Home</div>
-      <div class="tab" @click="goToPrivacy">Privacy</div>
+      <div class="tab" @click="goToPrivacy">Terms & Privacy Policy</div>
       <div class="tab" @click="goToUserSupport">Help Center</div>
       <div class="tab" @click="goToH5">Miti Web</div>
     </div>
