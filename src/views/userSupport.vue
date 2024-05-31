@@ -718,7 +718,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Post Content in Circle</h3>
-        <p>In the "Circle" menu, click the "New Post" button in the top right, edit your text, click the plus icon below the text input to add photos or videos, then click "Publish" at the top right.</p>
+        <p class="no-subtitle">In the "Circle" menu, click the "New Post" button in the top right, edit your text, click the plus icon below the text input to add photos or videos, then click "Publish" at the top right.</p>
         <ul>
           <li>If no photos or videos are selected, the post will be text-only.</li>
           <li>A single post can include up to 9 photos/videos.</li>
