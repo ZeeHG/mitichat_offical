@@ -455,7 +455,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Message Recall</h3>
-        <p>Long press the sent message, click "Recall" to retract the sent message. This feature supports recalling voice, text, image, video, contact card, and location messages sent within the last 2 minutes.</p>
+        <p class="no-subtitle">Long press the sent message, click "Recall" to retract the sent message. This feature supports recalling voice, text, image, video, contact card, and location messages sent within the last 2 minutes.</p>
       </div>
     `,
   },
@@ -465,7 +465,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Audio/Video Calls</h3>
-        <p>Click the plus icon next to the text input area, then click "Call" at the bottom to choose between starting a video or voice call.</p>
+        <p class="no-subtitle">Click the plus icon next to the text input area, then click "Call" at the bottom to choose between starting a video or voice call.</p>
       </div>
     `,
   },
@@ -508,7 +508,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Burn After Reading</h3>
-        <p>Burn After Reading is an optional feature for one-on-one chats.</p>
+        <p  class="no-subtitle">Burn After Reading is an optional feature for one-on-one chats.</p>
         <h3>1. Enable/Disable Burn After Reading</h3>
         <p>1) Click the plus icon next to the text input area, then click "Burn After Reading" to enable or disable.</p>
         <p>2) Click the three dots in the top right of the chat screen, enter chat settings, and toggle "Burn After Reading."</p>
@@ -524,7 +524,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Pin/Delete Chat</h3>
-        <p>Swipe left on the conversation bar in the chat menu, and click "Pin" or "Delete."</p>
+        <p class="no-subtitle">Swipe left on the conversation bar in the chat menu, and click "Pin" or "Delete."</p>
       </div>
     `,
   },
@@ -534,7 +534,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Search Chat History</h3>
-        <p>Click the plus icon next to the text input area, then click "Search" at the bottom to quickly find conversations, images, videos, and files.</p>
+        <p class="no-subtitle">Click the plus icon next to the text input area, then click "Search" at the bottom to quickly find conversations, images, videos, and files.</p>
       </div>
     `,
   },
@@ -587,7 +587,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Delete Friends</h3>
-        <p>Click the friend's avatar, click the function button in the top right, and click "Unfriend."</p>
+        <p class="no-subtitle">Click the friend's avatar, click the function button in the top right, and click "Unfriend."</p>
       </div>
     `,
   },
@@ -597,7 +597,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Friend Limit</h3>
-        <p>You can add up to 10,000 friends on miti (excluding groups).</p>
+        <p class="no-subtitle">You can add up to 10,000 friends on miti (excluding groups).</p>
       </div>
     `,
   },
@@ -622,7 +622,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Check If Blocked</h3>
-        <p>If you are blocked, you'll receive a "Message sent but rejected" notification when trying to message them.</p>
+        <p class="no-subtitle">If you are blocked, you'll receive a "Message sent but rejected" notification when trying to message them.</p>
       </div>
     `,
   },
@@ -645,7 +645,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Prevent Others from Adding You</h3>
-        <p>In "My" menu, click "Account Settings," and enable "Disallow Add Me as Friend."</p>
+        <p class="no-subtitle">In "My" menu, click "Account Settings," and enable "Disallow Add Me as Friend."</p>
       </div>
     `,
   },
@@ -655,7 +655,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Personal Information Settings</h3>
-        <p>In "My" menu, click "My Info" to set your miti nickname, gender, birthday, avatar, and mitiID.</p>
+        <p class="no-subtitle">In "My" menu, click "My Info" to set your miti nickname, gender, birthday, avatar, and mitiID.</p>
       </div>
     `,
   },
@@ -678,7 +678,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Modify Bound Account</h3>
-        <p>In "My" menu, click "Account Setup," then click "Account & Security" to manage the phone number and email linked to different accounts.</p>
+        <p class="no-subtitle">In "My" menu, click "Account Setup," then click "Account & Security" to manage the phone number and email linked to different accounts.</p>
       </div>
     `,
   },
@@ -688,7 +688,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Set New Message Alerts</h3>
-        <p>In "My" menu, click "Account Settings," and set the notification sound or vibration for new messages while miti is running. Enable "Do Not Disturb Mode" at the top of the "Account Settings" screen to stop receiving notifications.</p>
+        <p class="no-subtitle">In "My" menu, click "Account Settings," and set the notification sound or vibration for new messages while miti is running. Enable "Do Not Disturb Mode" at the top of the "Account Settings" screen to stop receiving notifications.</p>
       </div>
     `,
   },
@@ -698,7 +698,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Change System Language</h3>
-        <p>In "My" menu, click "Account Settings," then "Language Setup." miti currently supports English, Simplified Chinese, Japanese, Korean, and Spanish.</p>
+        <p class="no-subtitle">In "My" menu, click "Account Settings," then "Language Setup." miti currently supports English, Simplified Chinese, Japanese, Korean, and Spanish.</p>
       </div>
     `,
   },
@@ -708,7 +708,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Differences Between Discovery and Circle</h3>
-        <p>Discovery content is visible to everyone, while Circle content is only visible to your friends or specific people you set.</p>
+        <p class="no-subtitle">Discovery content is visible to everyone, while Circle content is only visible to your friends or specific people you set.</p>
       </div>
     `,
   },
@@ -735,7 +735,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Set Circle Post Viewing Permissions</h3>
-        <p>On the Circle posting page, click "Who Can Watch" to set the viewing permissions for your post.</p>
+        <p class="no-subtitle">On the Circle posting page, click "Who Can Watch" to set the viewing permissions for your post.</p>
       </div>
     `,
   },
@@ -745,7 +745,7 @@ const sections = ref([
     content: `
       <div>
         <h3> Delete Circle Posts</h3>
-        <p>Enter the post you created and click the delete button at the bottom left.</p>
+        <p class="no-subtitle">Enter the post you created and click the delete button at the bottom left.</p>
       </div>
     `,
   },
@@ -755,7 +755,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Post Content in Discovery</h3>
-        <p>In the "Circle" menu, click the "New Post" button in the top right, edit the text and images, enable the "Public" button at the bottom, then click "Publish" at the top right to share your post on Discovery.</p>
+        <p class="no-subtitle">In the "Circle" menu, click the "New Post" button in the top right, edit the text and images, enable the "Public" button at the bottom, then click "Publish" at the top right to share your post on Discovery.</p>
       </div>
     `,
   },
@@ -765,7 +765,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Delete Discovery Posts</h3>
-        <p>In the Discovery menu, click your post, then click the three dots in the top right and select "Delete."</p>
+        <p class="no-subtitle">In the Discovery menu, click your post, then click the three dots in the top right and select "Delete."</p>
       </div>
     `,
   },
@@ -775,7 +775,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Introduction to miti AI Features</h3>
-        <p>At miti, the AI era's social platform is one where AI agents coexist with real people, serving as friends or assistants. miti's official team has designed two AI agents: "My miti" and "Ada (Product Manager)." In the future, users will be able to train their own AI agents on our platform.</p>
+        <p class="no-subtitle">At miti, the AI era's social platform is one where AI agents coexist with real people, serving as friends or assistants. miti's official team has designed two AI agents: "My miti" and "Ada (Product Manager)." In the future, users will be able to train their own AI agents on our platform.</p>
         <h3>1. My miti</h3>
         <ul>
           <li>Send My miti links to news or articles to receive summarized key points.</li>
@@ -797,7 +797,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Accessing AI Features</h3>
-        <p>Inactive miti accounts can use chat, Discovery, and Circle features, but not AI features. Users can activate their miti accounts with an invite code to gain AI features.</p>
+        <p class="no-subtitle">Inactive miti accounts can use chat, Discovery, and Circle features, but not AI features. Users can activate their miti accounts with an invite code to gain AI features.</p>
       </div>
     `,
   },
@@ -824,7 +824,7 @@ const sections = ref([
     content: `
       <div>
         <h3>Differentiate AI Agents and Real Friends</h3>
-        <p>In the "Chat" menu, friends with a small robot icon next to their name are AI agents. You can also click the "Friends" tab at the top of the screen and select "AI Buddies" to view your AI friends list.</p>
+        <p class="no-subtitle">In the "Chat" menu, friends with a small robot icon next to their name are AI agents. You can also click the "Friends" tab at the top of the screen and select "AI Buddies" to view your AI friends list.</p>
       </div>
     `,
   },
@@ -1047,6 +1047,10 @@ const downloadPC = () => {
     :deep(.wide-column) {
       width: 80%;
     }
+  }
+  :deep(.no-subtitle) {
+    padding-left: 0;
+    margin-top: 20px;
   }
 }
 </style>
