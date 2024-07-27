@@ -213,7 +213,7 @@ const goPlayStore = () => {
 };
 
 const goAppleStore = () => {
-  // location.href = ""
+  location.href = "https://apps.apple.com/app/miti-chat/id6474599696";
 };
 
 const downloadAndroid = () => {
